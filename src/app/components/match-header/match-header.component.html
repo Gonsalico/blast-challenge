@@ -1,0 +1,19 @@
+<div class="match-header">
+    <div class="scoreboard">
+        <div class="team team-one">
+            <img [src]="getTeamImageName(match.teamOne)" [alt]="match.teamOne">
+            <h2>{{match.teamOne}}</h2>
+        </div>
+        <div class="result">
+            <h2>{{match.teamOneScore}}</h2>
+            <label>-</label>
+            <h2>{{match.teamTwoScore}}</h2>
+        </div>
+        <div class="team team-two">
+            <h2>{{match.teamTwo}}</h2>
+            <img [src]="getTeamImageName(match.teamTwo)" [alt]="match.teamTwo">
+        </div>
+    </div>
+    <label>{{match.mapSelected}}</label>
+    <label>{{match.date}}</label>
+</div>

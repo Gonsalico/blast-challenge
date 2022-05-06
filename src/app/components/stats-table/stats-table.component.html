@@ -1,0 +1,57 @@
+<div *ngIf="!loadingt" class="stats-table">
+    <div class="table teamone" [ngClass]="!isTerrorist(teamOne[0].side) ? 'ct-table' : 't-table'">
+        <div class="round-info">
+            <label class="round-info-label">Round: {{roundSelected}} - {{getRoundTime()}}m</label>
+        </div>
+        <div class="table-header">
+            <div class="header ct-header" *ngIf="!isTerrorist(teamOne[0].side)">
+                <label>Side - CT</label>
+                <img class="side-icon" src="assets/img/ct-icon.png" />
+            </div>
+            <div class="header t-header" *ngIf="isTerrorist(teamOne[0].side)">
+                <label>Side - TERRORIST</label>
+                <img class="side-icon" src="assets/img/t-icon.png" />
+            </div>
+        </div>
+        <div class="player-row" *ngFor="let player of teamOne">
+            <div class="name-section">
+                <label>{{player.name}}</label>
+            </div>
+            <div class="round-kills">
+                <div class="icons" *ngFor="let kill of getArrayFromNumbers(player.roundKills)">
+                    <img class="kill-icon" src="/assets/img/kill.svg" alt="kill-icon">
+                </div>
+            </div>
+            <div class="total-kills">
+                <label class="label-number-kills">Total Kills</label>
+                <label class="number-kills">{{player.totalKills}}</label>
+            </div>
+        </div>
+    </div>
+    <div class="table teatwo" [ngClass]="!isTerrorist(teamTwo[0].side) ? 'ct-table' : 't-table'">
+        <div class="table-header">
+            <div class="header ct-header" *ngIf="!isTerrorist(teamTwo[0].side)">
+                <label>Side - CT</label>
+                <img class="side-icon" src="assets/img/ct-icon.png" />
+            </div>
+            <div class="header t-header" *ngIf="isTerrorist(teamTwo[0].side)">
+                <label>Side - TERRORIST</label>
+                <img class="side-icon" src="assets/img/t-icon.png" />
+            </div>
+        </div>
+        <div class="player-row" *ngFor="let player of teamTwo">
+            <div class="name-section">
+                <label>{{player.name}}</label>
+            </div>
+            <div class="round-kills">
+                <div class="icons" *ngFor="let kill of getArrayFromNumbers(player.roundKills)">
+                    <img class="kill-icon" src="/assets/img/kill.svg" alt="kill-icon">
+                </div>
+            </div>
+            <div class="total-kills">
+                <label class="label-number-kills">Total Kills</label>
+                <label class="number-kills">{{player.totalKills}}</label>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<div *ngIf="!loading" class="home">
+    <app-match-header class="w-100" [match]="match"></app-match-header>
+    <app-round-stepper [rounds]="finalStats" [roundSelected]="roundSelected" (roundSelectedChange)="roundSelectedChange($event)"></app-round-stepper>
+    <app-stats-table class="w-100" [rounds]="finalStats" [players]="players" [roundChangeEvent]="roundChanged.asObservable()"></app-stats-table> 
+</div>

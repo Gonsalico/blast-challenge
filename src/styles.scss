@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --mainbackground: #31393c;
+  --mainbackground-light: #31393c;
+  --ctcolor: #2176ff;
+  --ctcolor-light: #33a1fd;
+  --tcolor: #f79824;
+  --tcolor-light: #fdca40;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff  ;
+}
+
+body {
+  background: rgb(0,0,55);
+  background: linear-gradient(200deg, rgba(0,0,55,1) 21%, rgba(255,35,80,1) 100%);
+  margin: 0;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 75px;
+}

@@ -1,0 +1,8 @@
+<div class="round-stepper">
+    <div class="back-line">
+        <div *ngFor="let round of rounds" class="round" [ngClass]="getWinner(round)"
+            [class.selected]="roundSelected == round.roundNumber" (click)="roundChange(round)">
+            <label>{{round.roundNumber}}</label>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+.stats-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.table {
+    margin-top: 25px;
+    padding: 15px;
+    width: 80%;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    position: relative;
+
+    &.ct-table {
+        background-color: var(--ctcolor);
+
+        >.player-row {
+            background-color: var(--ctcolor-light);
+        }
+    }
+
+    &.t-table {
+        background-color: var(--tcolor);
+
+        >.player-row {
+            background-color: var(--tcolor-light);
+        }
+    }
+}
+
+.player-row {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-between;
+    -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.15);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.name-section {
+    flex-basis: 100%;
+}
+
+.round-kills {
+    display: flex;
+    flex-basis: 100%;
+}
+
+.total-kills {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.kill-icon {
+    width: 15px;
+    margin-left: 10px;
+    filter: invert(0%) sepia(100%) saturate(55%) hue-rotate(234deg) brightness(200%) contrast(100%)
+}
+
+.number-kills {
+    font-weight: 600;
+    margin-left: 10px;
+    min-width: 30px;
+}
+
+.label-number-kills {
+    font-size: 13px;
+}
+
+.round-info-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-25px);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.side-icon {
+    width: 20px;
+    margin-left: 10px;
+}
