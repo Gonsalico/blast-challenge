@@ -32,6 +32,10 @@
             background-color: var(--tcolor-light);
         }
     }
+
+    &:last-child {
+        margin-bottom: 50px;
+    }
 }
 
 .player-row {
